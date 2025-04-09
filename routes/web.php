@@ -35,3 +35,16 @@ Route::get('/add-showcase', [ShowcaseController::class, 'create'])->name('showca
 
 // Route to process the showcase form submission.
 Route::post('/showcase', [ShowcaseController::class, 'store'])->name('showcase.store');
+
+
+
+
+
+Route::get('/view', function () {
+    return view('frontend.viewrecipes');
+})->name('view');
+
+
+Route::get('/manage', function () {
+    return view('frontend.managerecipes');
+})->name('manage');
