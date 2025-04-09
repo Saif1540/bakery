@@ -38,7 +38,7 @@ Route::post('/ingredients', [IngredientController::class, 'store'])->name('ingre
 
 
 Route::get('/add-recipe', [BakeryRecipeController::class, 'create'])->name('recipes.create');
-Route::post('/add-recipe', [BakeryRecipeController::class, 'store'])->name('recipes.store');
+Route::post('/add-recipse', [BakeryRecipeController::class, 'store'])->name('recipes.store');
 
 Route::post('/recipes/calculate-cost', [BakeryRecipeController::class, 'calculateCost'])->name('recipes.calculateCost');
 

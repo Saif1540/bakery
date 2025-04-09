@@ -43,7 +43,9 @@ class BakeryRecipeController extends Controller
     }
 
     public function store(Request $request)
+    
 {
+    
     // Validate the incoming request
     $data = $request->validate([
         'recipe_name' => 'required|string',
@@ -55,6 +57,7 @@ class BakeryRecipeController extends Controller
         'ingredients.*.id' => 'required|exists:ingredients,id',
         'ingredients.*.quantity' => 'required|numeric',
     ]);
+    // dd($data['ingredients']);
 
     // Prepare the ingredients array with ID, quantity, and cost (if needed)
     $ingredients = collect($data['ingredients'])->map(function ($ingredient) {
