@@ -15,13 +15,19 @@ class Recipe extends Model
         'selling_price_per_kg',
         'labour_time',
         'weight_per_piece',
+        'recipe_weight',
         'ingredients',
+        'quantity',
+        'cost',
+        'ingredients_total_cost',
     ];
-
-    public function ingredients()
-    {
-        return $this->belongsToMany(Ingredient::class)
-                    ->withPivot('quantity_in_grams', 'calculated_cost')
-                    ->withTimestamps();
-    }
+    
+    protected $casts = [
+        'ingredients'           => 'array',
+        'quantity'              => 'array',
+        'cost'                  => 'array',
+        'ingredients_total_cost'=> 'float',
+        'recipe_weight'         => 'float',
+    ];
+    
 }

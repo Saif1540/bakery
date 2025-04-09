@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IngredientController;
 use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\BakeryRecipeController;
+use App\Http\Controllers\ShowcaseController;
 
 Route::get('/', function () {
     return view('Auth.register');
@@ -17,20 +18,7 @@ Route::get('/login', function () {
 })->name('login');
 
 
-Route::get('/app', function () {
-    return view('layouts.app');
-})->name('login');
-
-
-Route::get('/add', function () {
-    return view('frontend.ingredients');
-})->name('login');
-
-
-
-Route::get('/recipe', function () {
-    return view('frontend.addrecipe');
-})->name('recipe');
+ 
 
 Route::get('/add-ingredient', [IngredientController::class, 'create'])->name('ingredient.create');
 Route::post('/ingredients', [IngredientController::class, 'store'])->name('ingredients.store');
@@ -43,4 +31,7 @@ Route::post('/add-recipse', [BakeryRecipeController::class, 'store'])->name('rec
 Route::post('/recipes/calculate-cost', [BakeryRecipeController::class, 'calculateCost'])->name('recipes.calculateCost');
 
 
+Route::get('/add-showcase', [ShowcaseController::class, 'create'])->name('showcase.create');
 
+// Route to process the showcase form submission.
+Route::post('/showcase', [ShowcaseController::class, 'store'])->name('showcase.store');

@@ -106,10 +106,23 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6">
+                                    <label class="form-label">Recipe Weight per kg</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">$</span>
+                                        <input type="number" name="recipe_weight" class="form-control" id="Weightperrecipe" >
+                                    </div>
+                                    </div>
+
+
+                                    
+
+                                   
+
+                                    <div class="col-md-6">
                                         <div class="form-check mt-4">
                                             <input class="form-check-input" type="checkbox" id="weightToggle">
                                             <label class="form-check-label" for="weightToggle">
-                                                Add weight per piece
+                                           Sell by piece?
                                             </label>
                                         </div>
                                         <div class="mt-3 d-none" id="weightInputContainer">
@@ -125,6 +138,10 @@
                                                 <span class="input-group-text">$</span>
                                                 <input type="text" class="form-control" id="pricePerPiece" readonly>
                                             </div>
+
+
+
+
                                         </div>
                                         </div>
                                     </div>

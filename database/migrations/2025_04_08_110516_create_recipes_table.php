@@ -17,8 +17,12 @@ return new class extends Migration
             $table->string('category');
             $table->decimal('selling_price_per_kg', 10, 2);
             $table->integer('labour_time');
-            $table->integer('weight_per_piece')->nullable(); // Optional
-            $table->json('ingredients');// Store ingredients in JSON format
+            $table->integer('weight_per_piece')->nullable(); 
+            $table->decimal('recipe_weight', 10, 2)->nullable();
+            $table->decimal('ingredients_total_cost', 10, 2)->nullable();            
+            $table->json('ingredients');
+            $table->json('quantity');
+            $table->json('cost');
             $table->timestamps();
         });
     }
