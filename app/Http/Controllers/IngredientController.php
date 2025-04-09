@@ -9,7 +9,7 @@ class IngredientController extends Controller
     public function index()
     {
         $ingredients = Ingredient::all();
-        return view('ingredients.index', compact('ingredients'));
+        return view('frontend.addrecipe', compact('ingredients'));
     }
 
     public function create()

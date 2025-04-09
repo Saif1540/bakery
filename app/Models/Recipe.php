@@ -15,6 +15,7 @@ class Recipe extends Model
         'selling_price_per_kg',
         'labour_time',
         'weight_per_piece',
+        'ingredients',
     ];
 
     public function ingredients()

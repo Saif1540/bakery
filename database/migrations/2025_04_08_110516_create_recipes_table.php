@@ -18,7 +18,7 @@ return new class extends Migration
             $table->decimal('selling_price_per_kg', 10, 2);
             $table->integer('labour_time');
             $table->integer('weight_per_piece')->nullable(); // Optional
-            $table->json('ingredients')->nullable(); // Store ingredients in JSON format
+            $table->json('ingredients');// Store ingredients in JSON format
             $table->timestamps();
         });
     }
