@@ -11,7 +11,7 @@ class Showcase extends Model
 
     protected $fillable = [
         'showcase_date',
-        'recipe_name',
+        'recipe_id',
         'quantity',
         'unit_cost',
         'potential_cost',

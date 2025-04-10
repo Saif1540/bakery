@@ -11,6 +11,47 @@ class ShowcaseController extends Controller
     /**
      * Display the form to create a new showcase.
      */
+
+
+
+     public function index()
+     {
+         // Retrieve all showcase records from the database.
+         $showcases = \App\Models\Showcase::all();
+         
+         // Pass the records to the 'frontend.viewrecipes' view.
+         return view('frontend.viewrecipes', compact('showcases'));
+     }
+     
+
+
+
+
+public function manage($id)
+    {
+        // Retrieve the specific showcase record.
+        $showcase = Showcase::findOrFail($id);
+
+        // Navigate to the managerecipes.blade.php view with the record.
+        return view('frontend.managerecipes', compact('showcase'));
+    }
+
+    
+    public function destroy($id)
+    {
+        // Retrieve the specific showcase record.
+        $showcase = Showcase::findOrFail($id);
+
+        // Delete the record from the database.
+        $showcase->delete();
+
+        // Redirect back to the showcase list page with a success message.
+        return redirect()->route('viewshowcases')
+                         ->with('success', 'Showcase recipe deleted successfully!');
+    }
+
+
+
     public function create()
     {
         // Fetch recipes to display in the select options.

@@ -40,11 +40,8 @@ Route::post('/showcase', [ShowcaseController::class, 'store'])->name('showcase.s
 
 
 
-Route::get('/view', function () {
-    return view('frontend.viewrecipes');
-})->name('view');
+Route::get('/viewshowcases', [ShowcaseController::class, 'index'])->name('viewshowcases');
 
 
-Route::get('/manage', function () {
-    return view('frontend.managerecipes');
-})->name('manage');
+Route::get('/showcases/manage/{id}', [ShowcaseController::class, 'manage'])->name('showcase.manage');
+Route::delete('/showcases/delete/{id}', [ShowcaseController::class, 'destroy'])->name('showcase.delete');

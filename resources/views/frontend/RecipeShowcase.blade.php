@@ -30,7 +30,7 @@
                           <option value="{{ $recipe->id }}"
                                   data-weight="{{ $recipe->recipe_weight }}"
                                   data-price="{{ $recipe->selling_price_per_kg }}">
-                             {{ $recipe->recipe_name }} (Weight: {{ $recipe->recipe_weight }} grams, Price: ${{ $recipe->selling_price_per_kg }}/kg)
+                                  {{ $recipe->id }}- {{ $recipe->recipe_name }} (Weight: {{ $recipe->recipe_weight }} grams, Price: ${{ $recipe->selling_price_per_kg }}/kg)
                           </option>
                         @endforeach
                      </select>

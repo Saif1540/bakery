@@ -13,13 +13,7 @@
                 <form id="manageRecipesForm" method="POST" action=" ">
                     @csrf
                     <!-- Recipe Info Section -->
-                    <div class="row g-4 mb-4">
-                        <div class="col-md-6">
-                            <label for="displayQuantity" class="form-label">Display Quantity (Pieces)</label>
-                            <input type="number" class="form-control" id="displayQuantity" name="display_quantity" placeholder="Enter display quantity" required>
-                        </div>
-                         
-                    </div>
+        
 
                     <!-- Total Sold Section -->
                     <div class="card mb-4 border-0 shadow-sm">
@@ -35,6 +29,12 @@
                                 <div class="col-md-6">
                                     <label for="soldKg" class="form-label">Sold (Kg)</label>
                                     <input type="number" class="form-control" id="soldKg" name="sold_kg" placeholder="Enter sold in Kg" step="0.01" required>
+                                </div>
+
+
+                                <div class="col-md-6">
+                                    <label for="soldKg" class="form-label">TotalSold (Kg)</label>
+                                    <input type="number" class="form-control" id="soldKg" name="total sold_kg" placeholder="Total sold in Kg" step="0.01" readonly>
                                 </div>
                             </div>
                         </div>
@@ -54,6 +54,12 @@
                                 <div class="col-md-6">
                                     <label for="wasteKg" class="form-label">Waste (Kg)</label>
                                     <input type="number" class="form-control" id="wasteKg" name="waste_kg" placeholder="Enter waste in Kg" step="0.01" required>
+                                </div>
+
+
+                                <div class="col-md-6">
+                                    <label for="soldKg" class="form-label">Total wasteKg (Kg)</label>
+                                    <input type="number" class="form-control" id="wasteKg" name="total wasteKg" placeholder="Total waste in Kg" step="0.01" readonly>
                                 </div>
                             </div>
                         </div>

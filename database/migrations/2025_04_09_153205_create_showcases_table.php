@@ -14,7 +14,7 @@ class CreateShowcasesTable extends Migration
         Schema::create('showcases', function (Blueprint $table) {
             $table->id();
             $table->date('showcase_date');
-            $table->string('recipe_name');
+            $table->string('recipe_id');
             $table->integer('quantity');
             $table->decimal('potential_cost', 10, 2);
             $table->timestamps();
